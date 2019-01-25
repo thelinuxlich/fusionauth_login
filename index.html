@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="../lib/ClientResponse.js"></script>
+    <script src="../lib/RESTClient.js"></script>
+    <script src="../lib/FusionAuthClient.js"></script>
+    <script>
+      var client = new FusionAuthClient('dINbDCtYGRQMrDvB5l382mtWLFx2obw2R7oEJDumPO8', 'http://http://45.77.102.42:9011');
+      function handleResponse (clientResponse) {
+        console.info(JSON.stringify(clientResponse.successResponse.user, null, 2));
+      }
+
+      // Retrieve User by Email Address
+      client.retrieveUserByEmail('thelinuxlich@gmail.com', handleResponse);
+    </script>
+  </head>
+  <body>
+    Super Awesome Application
+  </body>
+</html>
